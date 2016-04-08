@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "chef", ">= 11.10.4"
   s.add_development_dependency "rspec"
+  s.add_development_dependency "rake", "~> 10.1"
   s.require_path = "lib"
   s.files = %w{LICENSE README.md CONTRIBUTING.md Rakefile} + Dir.glob("{lib,spec}/**/*")
 end
