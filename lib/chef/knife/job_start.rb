@@ -97,13 +97,13 @@ class Chef
 
         job_json = {
           'command' => job_name,
-          'nodes' => @node_names,
-          'capture_output' => config[:capture_output]
+          'nodes' => @node_names
+          #'capture_output' => config[:capture_output]
         }
         job_json['file'] = "raw:" + file_helper(config[:send_file]) if config[:send_file]
         job_json['quorum'] = get_quorum(config[:quorum], @node_names.length)
         env = get_env(config)
-        job_json['env'] = env if env
+        #job_json['env'] = env if env
         job_json['dir'] = config[:in_dir] if config[:in_dir]
         job_json['user'] = config[:as_user] if config[:as_user]
 
